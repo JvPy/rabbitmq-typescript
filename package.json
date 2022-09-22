@@ -1,0 +1,33 @@
+{
+  "name": "rabbit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "docker:clear": "docker rm rabbit",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "worker": "npx ts-node ./src/worker/worker.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.8.2",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.42",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  }
+}
